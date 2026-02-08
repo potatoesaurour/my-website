@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opz,wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root,
+.bonquin-contact-info {
+    --primary-color: #f809c8;
+    --text-color: #bd3dac;
+    --font-color: black;
+    --scrollbar-3dlight-color: rgba(255, 0, 115, 0.812);;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: 'Inter',Arial, sans-serif;
+    background-color: bisque;
+    color: black;
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bonquin-description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+}
+
+.bonquin-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.bonquin-pretitle {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.bonquin-item-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.bonquin-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background:bisque;
+    gap: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .bonquin-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.bonquin-profile {
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
+}
+
+.bonquin-footer-container {
+    grid-column: 1/-1;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.bonquin-footer-container>div {
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .bonquin-profile {
+        margin-bottom: 0;
+    }
+
+    .bonquin-footer-container {
+        flex-direction: column;
+    }
+}
+
+.bonquin-profile-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.bonquin-profileImg {
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bonquin-fname {
+    color: black;
+    font-weight: 200;
+    font-size: 5rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.8rem;
+    text-align: left;
+}
+
+.bonquin-lname {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 6rem;
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+}
+
+.bonquin-profile-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/*on mobile*/
+@media only screen and (max-width: 768px) {
+    .bonquin-profile-container {
+        flex-direction: column;
+    }
+}
+
+/*on mobile*/
+.bonquin-skill {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.bonquin-skills {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+li::marker {
+    content: '🩷';
+}
+
+.bonquin-ref-item {
+    margin-left: 2rem;
+}
+
+.bonquin-ref-name,
+.bonquin-item-Pretitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--font-color);
+}
+.bonquin-item-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:black;
+}
+
+.bonquin-edu-item,
+.bonquin-award-item,
+.bonquin-exp-item,
+.bonquin-seminar-item,
+.bonquin-skill-item,
+.bonquin-ref-item{
+    margin-top: 2rem;
+    background: rgba(216, 71, 209, 0.108);
+    padding: 1.2rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(229, 50, 202, 0.016);
+}
+.bonquin-seminar-item:hover,
+.bonquin-exp-item:hover,
+.bonquin-award-item:hover,
+.bonquin-edu-item:hover,
+.bonquin-ref-item:hover,
+.bonquin-skill-item:hover {
+     background: var(--scrollbar-3dlight-color);
+     box-shadow: 0 4px 12px rgba(229, 50, 202, 0.1);
+     transform: translateY();
+     transition: all .3s ease;
+     border-radius: 10px;
+     cursor: pointer;
+}
+
+.bonquin-social-items {
+    margin-top: 2rem;
+}
+
+.bonquin-social-list {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+}
+
+.bonquin-social-list:hover {
+    color: var(--primary-color);
+}
+
+.bonquin-social-list svg {
+    width: 2rem;
+}
+
+hr {
+    grid-column: 1/-1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.229);
+}
+
+@media only screen and (max-width: 768px) {
+    hr {
+        margin: 0 auto;
+    }
+}
